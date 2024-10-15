@@ -71,3 +71,8 @@ li.completed {
     text-decoration: line-through;
     color: grey;
 }
+
+.deleteButton {
+    padding: 1em;
+    color: black;
+}
