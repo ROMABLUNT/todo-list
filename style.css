@@ -90,3 +90,8 @@ header h1 {
     border-radius: 5px;
     transition: width 0.3s ease;
 }
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
