@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Advanced Task Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="todo-container">
-        <h1>To-Do List</h1>
-        <div class="input-container">
-            <input type="text" id="todo-input" placeholder="Добавить задачу">
-            <button id="add-btn">Добавить</button>
-        </div>
-        <ul id="todo-list"></ul>
+    <div class="app-container">
+        <header>
+            <h1>Task Tracker</h1>
+        </header>
+
+        <section class="task-form">
+            <input type="text" id="task-input" placeholder="Enter your task" required>
+            <select id="category-select">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="study">Study</option>
+            </select>
+            <input type="date" id="due-date">
+            <button id="add-task-btn">Add Task</button>
+        </section>
+
+        <section class="filters">
+            <button id="all-tasks-btn">All</button>
+            <button id="completed-tasks-btn">Completed</button>
+            <button id="pending-tasks-btn">Pending</button>
+        </section>
+
+        <section class="task-list">
+            <ul id="task-list"></ul>
+        </section>
+
+        <section class="progress-bar">
+            <div class="progress" id="progress-bar"></div>
+        </section>
     </div>
 
     <script src="script.js"></script>

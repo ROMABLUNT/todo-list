@@ -1,78 +1,92 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.todo-container {
-    background: white;
+.app-container {
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+header h1 {
     text-align: center;
-    margin-bottom: 20px;
+    color: #333;
 }
 
-.input-container {
+.task-form {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-input {
-    width: 70%;
+.task-form input,
+.task-form select,
+.task-form button {
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #5cb85c;
+.task-form button {
+    background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #4cae4c;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    background-color: #eee;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.filters {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 20px;
 }
 
-li.completed {
-    text-decoration: line-through;
-    color: grey;
+.filters button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.deleteButton {
-    padding: 1em;
-    color: black;
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.progress-bar {
+    margin-top: 20px;
+}
+
+.progress {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress::after {
+    content: '';
+    height: 100%;
+    width: 0;
+    background-color: #28a745;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: width 0.3s ease;
 }
